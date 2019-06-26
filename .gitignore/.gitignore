@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+        int anzahl = Convert.ToInt32(Console.ReadLine());
+        
+        for (int x = 0; x < anzahl; x++)
+        {
+            string [] zeit = Console.ReadLine().Split(' ');
+            int stdanf = Convert.ToInt32(zeit[0]);
+            int minanf = Convert.ToInt32(zeit[1]);
+            int stdend = Convert.ToInt32(zeit[2]);
+            int minend = Convert.ToInt32(zeit[3]);
+            int anf = stdanf * 60 + minanf;
+            int end = stdend * 60 + minend;
+            int diff = end - anf;
+            
+                int std = diff / 60;
+                int min = diff - std * 60;
+                Console.WriteLine(std + " " + min);
+       
+        }
+    }
+  }
+}
